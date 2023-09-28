@@ -1,0 +1,296 @@
+{
+	"info": {
+		"_postman_id": "b779439a-2f85-443f-82b4-67f55e47c5dc",
+		"name": "university",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17389593"
+	},
+	"item": [
+		{
+			"name": "avg_grade",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/grades/average?studentId=3&subject=Математика",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"grades",
+						"average"
+					],
+					"query": [
+						{
+							"key": "studentId",
+							"value": "3"
+						},
+						{
+							"key": "subject",
+							"value": "Математика"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_academic",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/academic/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"academic",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_curriculum",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/curriculum/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"curriculum",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_academic_by_curr",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_academic_by_student_id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "get_academic_by_id",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "add_academic",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": 2022,\r\n    \"semester\": 1,\r\n    \"student\": {\r\n        \"student_id\": 1\r\n     },\r\n    \"curriculum\": {\r\n        \"curriculumId\": 2\r\n     },\r\n    \"grade\": 80\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/academic",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"academic"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "edit_academic",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"year\": 2022,\r\n    \"semester\": 1,\r\n    \"student\": {\r\n        \"student_id\": 1\r\n     },\r\n    \"curriculum\": {\r\n        \"curriculumId\": 1\r\n     },\r\n    \"grade\": 99\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/academic/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"academic",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_academic",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/academic/13",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"academic",
+						"13"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add_new_student",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"lastName\": \"Сергей\",\r\n    \"firstName\": \"Сергеев\",\r\n    \"middleName\": \"Иванович\",\r\n    \"admissionYear\": 2022,\r\n    \"studyForm\": \"Очная\",\r\n    \"groupNumber\": \"Группа 103\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/students/add?lastName=Сергей&firstName=Сергеев&middleName=Иванович&admissionYear=2022&studyForm=очная&groupNumber=группа 101",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"add"
+					],
+					"query": [
+						{
+							"key": "lastName",
+							"value": "Сергей"
+						},
+						{
+							"key": "firstName",
+							"value": "Сергеев"
+						},
+						{
+							"key": "middleName",
+							"value": "Иванович"
+						},
+						{
+							"key": "admissionYear",
+							"value": "2022"
+						},
+						{
+							"key": "studyForm",
+							"value": "очная"
+						},
+						{
+							"key": "groupNumber",
+							"value": "группа 101"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_all_students",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get_student_by_id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete_student",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/students/100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"students",
+						"100"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
